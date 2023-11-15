@@ -100,4 +100,15 @@ public class DiscordRegisterTest {
         Assert.assertEquals("Formato de correo electrónico no válido", errorMessageText);
     }
 
+    @AfterTest
+    public void closeDriver() throws Exception {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+
+        }
+        driver.quit();
+    }
+
 }

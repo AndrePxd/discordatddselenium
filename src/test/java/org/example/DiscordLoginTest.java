@@ -64,6 +64,9 @@ public class DiscordLoginTest {
 
         }
     }
-
+    @AfterTest
+    public void closeDriver() throws Exception {
+        driver.quit();
+    }
 
 }
